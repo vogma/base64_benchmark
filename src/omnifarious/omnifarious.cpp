@@ -5,6 +5,7 @@
 #include <limits>
 #include <stdexcept>
 #include <cctype>
+#include <cstdint>
 
 static const char b64_table[65] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 

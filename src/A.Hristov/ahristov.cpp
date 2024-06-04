@@ -1,6 +1,7 @@
 #include "ahristov.h"
 #include <cassert>
 #include <array>
+#include <cstdint> 
 
 const char PADDING_CHAR = '=';
 

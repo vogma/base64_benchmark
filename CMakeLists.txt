@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.15)
 #CLANG compiler activation options
 SET (CMAKE_C_COMPILER "riscv64-unknown-linux-gnu-gcc")
 SET (CMAKE_CXX_COMPILER "riscv64-unknown-linux-gnu-g++")

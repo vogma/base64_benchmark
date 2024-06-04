@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 #CLANG compiler activation options
-SET (CMAKE_C_COMPILER "/usr/bin/clang-12")
-SET (CMAKE_CXX_COMPILER "/usr/bin/clang++-12")
+SET (CMAKE_C_COMPILER "riscv64-unknown-linux-gnu-gcc")
+SET (CMAKE_CXX_COMPILER "riscv64-unknown-linux-gnu-g++")
 
 SET(CMAKE_BUILD_TYPE Release)
 SET(NAME base64.bin)

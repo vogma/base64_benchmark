@@ -58,6 +58,10 @@ AUX_SOURCE_DIRECTORY(./src/modp_b64_chromium CTR_SOURCES)
 INCLUDE_DIRECTORIES(libs/cppcodec)
 AUX_SOURCE_DIRECTORY(./src/cppcodec CTR_SOURCES)
 
+INCLUDE_DIRECTORIES(libs/base64rvv)
+AUX_SOURCE_DIRECTORY(./src/base64rvv CTR_SOURCES)
+
+
 INCLUDE_DIRECTORIES(libs/boost/utility/include)
 INCLUDE_DIRECTORIES(libs/boost/serialization/include)
 INCLUDE_DIRECTORIES(libs/boost/config/include)

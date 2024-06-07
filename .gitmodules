@@ -55,3 +55,6 @@
 [submodule "libs/IMUtility"]
 	path = libs/IMUtility
 	url = https://github.com/IMProject/IMUtility.git
+[submodule "libs/base64rvv"]
+	path = libs/base64rvv
+	url = https://github.com/vogma/Base64

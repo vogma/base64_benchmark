@@ -5,7 +5,6 @@ SET (CMAKE_CXX_COMPILER "riscv64-unknown-linux-gnu-g++")
 
 ADD_COMPILE_OPTIONS(-march=rv64gcvzba -mabi=lp64d -O3 -static -Wall -g)
 
-
 SET(CMAKE_BUILD_TYPE Release)
 SET(NAME base64.bin)
 PROJECT(${NAME})
@@ -27,6 +26,10 @@ endif()
 # BUILD AND INCLUDE GOOGLETEST
 ADD_SUBDIRECTORY(libs/googletest/)
 INCLUDE_DIRECTORIES(libs/googletest/googletest/include)
+
+ADD_SUBDIRECTORY(libs/base64rvv/)
+INCLUDE_DIRECTORIES(libs/base64rvv/lib/include/)
+# INCLUDE_DIRECTORIES(libs/base64rvv/lib/include)
 
 INCLUDE_DIRECTORIES(libs)
 
@@ -61,10 +64,9 @@ AUX_SOURCE_DIRECTORY(./src/modp_b64_chromium CTR_SOURCES)
 INCLUDE_DIRECTORIES(libs/cppcodec)
 AUX_SOURCE_DIRECTORY(./src/cppcodec CTR_SOURCES)
 
-ADD_SUBDIRECTORY(libs/base64rvv/)
-INCLUDE_DIRECTORIES(libs/base64rvv)
 INCLUDE_DIRECTORIES(libs/base64rvv/lib/include)
-AUX_SOURCE_DIRECTORY(./src/base64rvv C_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64rvv CTR_SOURCES)
+
 
 INCLUDE_DIRECTORIES(libs/boost/utility/include)
 INCLUDE_DIRECTORIES(libs/boost/serialization/include)
@@ -83,8 +85,4 @@ SET_SOURCE_FILES_PROPERTIES( ${CTR_SOURCES} PROPERTIES LANGUAGE CXX )
 SET_SOURCE_FILES_PROPERTIES( ${C_SOURCES} PROPERTIES LANGUAGE C )
 
 ADD_EXECUTABLE(${NAME} ${CTR_SOURCES} ${C_SOURCES})
-IF(UNIX AND (NOT APPLE))
-  TARGET_LINK_LIBRARIES(${NAME} gtest pthread stdc++fs)
-else()
-  TARGET_LINK_LIBRARIES(${NAME} gtest pthread)
-endif()
+TARGET_LINK_LIBRARIES(${NAME} b64rvv gtest pthread stdc++fs -static)

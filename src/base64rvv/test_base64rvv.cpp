@@ -50,12 +50,11 @@ struct BASE64RVV_Adapt
 	// void base64_encode_rvv(uint8_t *restrict input, uint8_t *output, size_t length);
 	// void base64_decode_rvv(const char *data, int8_t *output, size_t input_length, size_t *output_length);
 
-	static std::string decode(void (*func)(const char *in, int8_t *out, size_t inlen, size_t *out_len), const std::string &encoded)
+	static std::string decode(void (*func)(const char *in, int8_t *out, size_t inlen), const std::string &encoded)
 	{
 		size_t decLen = GetDecodedLength(encoded);
 		std::string decoded(decLen, '\0');
-		size_t outlen;
-		func((const char *)&encoded[0], (int8_t *)&decoded[0], (size_t) encoded.length(), &outlen);
+		func((const char *)&encoded[0], (int8_t *)&decoded[0], (size_t) encoded.length());
 		return decoded;
 	}
 };

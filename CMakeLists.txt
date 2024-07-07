@@ -3,7 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.15)
 SET (CMAKE_C_COMPILER "riscv64-unknown-linux-gnu-gcc")
 SET (CMAKE_CXX_COMPILER "riscv64-unknown-linux-gnu-g++")
 
-ADD_COMPILE_OPTIONS(-march=rv64gcvzba -mabi=lp64d -O3 -static -Wall -g)
+ADD_COMPILE_OPTIONS(-march=rv64imafdcv_sscofpmf_sstc_svpbmt_zicbom_zicboz_zicbop_zihintpause -mabi=lp64d -O3 -static -Wall -g)
 
 SET(CMAKE_BUILD_TYPE Release)
 SET(NAME base64.bin)
@@ -65,7 +65,10 @@ INCLUDE_DIRECTORIES(libs/cppcodec)
 AUX_SOURCE_DIRECTORY(./src/cppcodec CTR_SOURCES)
 
 INCLUDE_DIRECTORIES(libs/base64rvv/lib/include)
-AUX_SOURCE_DIRECTORY(./src/base64rvv CTR_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64rvv_m4 CTR_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64rvv_m2 CTR_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64rvv_m2_naive CTR_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64rvv_m1 CTR_SOURCES)
 
 
 INCLUDE_DIRECTORIES(libs/boost/utility/include)

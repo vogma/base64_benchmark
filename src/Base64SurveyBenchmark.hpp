@@ -96,21 +96,13 @@ namespace b64_survey
 
                 for (int testN = 0; testN < testCases.size(); ++testN)
                 {
-                    // std::string decodeResult = (entry.second)(value_buffers[testN]);
-                    // if (decodeResult != buffers[testN])
-                    // {
-                    //     ostringstream ret, ret2;
-
-                    //     for (string::size_type i = 0; i < buffers[testN].length(); ++i)
-                    //         ret << std::hex << std::setfill('0') << std::setw(2) << (std::uppercase) << (int)buffers[testN][i];
-
-                    //     for (string::size_type i = 0; i < decodeResult.length(); ++i)
-                    //         ret2 << std::hex << std::setfill('0') << std::setw(2) << (std::uppercase) << (int)decodeResult[i];
-
-                    //     cout << "failure, expected " << ret.str() << " but got " << ret2.str()
-                    //          << endl;
-                    //     break;
-                    // }
+                    std::string decodeResult = (entry.second)(value_buffers[testN]);
+                    if (decodeResult != buffers[testN])
+                    {
+                        cout << "failure, expected " << buffers[testN] << " but got " << decodeResult
+                             << endl;
+                        break;
+                    }
 
                     pair<int, microseconds> result = RunUntil(maxIter, maxMS, [&]()
                                                               { (entry.second)(value_buffers[testN]); });

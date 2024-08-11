@@ -20,7 +20,8 @@ using namespace std::chrono;
 using namespace std;
 using namespace b64_survey;
 
-static const std::vector<int> test_sizes{ 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536 };
+// static const std::vector<int> test_sizes{32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576};
+static const std::vector<int> test_sizes{1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608};
 
 int main(int argc, char *argv[])
 {
@@ -33,8 +34,8 @@ int main(int argc, char *argv[])
     // Run smoke tests on each implementation
     {
         int result = Base64SurveyTests::RunTests(argc + 1, argv);
-        cout << "Press enter to continue." << endl;
-        getchar();
+        // cout << "Press enter to continue." << endl;
+        // getchar();
     }
 
     // Profile the encoders
@@ -42,13 +43,13 @@ int main(int argc, char *argv[])
         cout << endl;
         cout << "*** PROFILING ENCODERS ***" << endl;
         cout << endl;
-        MarkdownResultsDelegate liveProgress{ test_sizes };
+        MarkdownResultsDelegate liveProgress{test_sizes};
         BenchmarkResults encodeResults = Base64SurveyBenchmark::RunEncodeBenchmark(test_sizes, liveProgress, 1000000, 500ms);
 
         cout << endl;
         cout << "*** SORTING ENCODER RESULTS ***" << endl;
         cout << endl;
-        MarkdownResultsDelegate sortedProgress{ test_sizes };
+        MarkdownResultsDelegate sortedProgress{test_sizes};
         Base64SurveyReport::PrintSortedResults(encodeResults, sortedProgress);
 
         // create stat javascript files
@@ -63,13 +64,13 @@ int main(int argc, char *argv[])
         cout << endl;
         cout << "*** PROFILING DECODERS ***" << endl;
         cout << endl;
-        MarkdownResultsDelegate liveProgress{ test_sizes };
+        MarkdownResultsDelegate liveProgress{test_sizes};
         BenchmarkResults decodeResults = Base64SurveyBenchmark::RunDecodeBenchmark(test_sizes, liveProgress, 1000000, 500ms);
 
         cout << endl;
         cout << "*** SORTING DECODER RESULTS ***" << endl;
         cout << endl;
-        MarkdownResultsDelegate sortedProgress{ test_sizes };
+        MarkdownResultsDelegate sortedProgress{test_sizes};
         Base64SurveyReport::PrintSortedResults(decodeResults, sortedProgress);
 
         // create stat javascript files
@@ -77,7 +78,7 @@ int main(int argc, char *argv[])
         cout << "Saved decoder report to " + savedPath;
     }
 
-    cout << "Press enter to continue." << endl;
-    getchar();
+    // cout << "Press enter to continue." << endl;
+    // getchar();
     return 0;
 }

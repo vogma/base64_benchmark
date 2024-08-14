@@ -37,7 +37,7 @@ struct Base64rvv_m2_naive
 {
 	std::string encode(const std::string &bytes)
 	{
-		return BASE64RVVM2NAIVE_Adapt::encode(base64_encode_rvv_m2, bytes);
+		return BASE64RVVM2NAIVE_Adapt::encode(base64_encode_rvv_m2_naive, bytes);
 	}
 
 	std::string decode(const std::string &base64)

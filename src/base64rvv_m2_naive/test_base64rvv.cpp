@@ -42,7 +42,7 @@ struct Base64rvv_m2_naive
 
 	std::string decode(const std::string &base64)
 	{
-		return BASE64RVVM2NAIVE_Adapt::decode(base64_decode_rvv_m2, base64);
+		return BASE64RVVM2NAIVE_Adapt::decode(base64_decode_rvv_m2_naive, base64);
 	}
 };
 

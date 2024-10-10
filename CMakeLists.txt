@@ -78,6 +78,9 @@ include_directories(libs/boost/static_assert/include)
 include_directories(libs/boost/assert/include)
 aux_source_directory(./src/boost CTR_SOURCES)
 
+add_subdirectory(./libs/base64sve/)
+include_directories(libs/base64sve/lib/include)
+
 set_source_files_properties( ${CTR_SOURCES} PROPERTIES LANGUAGE CXX )
 set_source_files_properties( ${C_SOURCES} PROPERTIES LANGUAGE C )
 

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="impl">
+      <UniqueIdentifier>{c19293a8-1cb5-4e0f-90e4-e98f01ffd161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\adp-gmbh.ch">
+      <UniqueIdentifier>{41efd618-52fc-4742-81aa-549449f3cb72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\InternetSoftwareConsortium">
+      <UniqueIdentifier>{2a5ac288-4a82-42c5-ac84-163158750d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\LihO">
+      <UniqueIdentifier>{ecda5d82-fb0c-40ea-8afb-d1ff62bd57e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\ManuelMartinez">
+      <UniqueIdentifier>{431dc471-6409-4b27-becf-0dd38570e228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\DaedalusAlpha">
+      <UniqueIdentifier>{cbc44336-5e49-4928-81da-d8998480641c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\ElegantDice">
+      <UniqueIdentifier>{83f398b0-d4e2-486a-9e93-b58f2f7cea75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\jounimalinen">
+      <UniqueIdentifier>{091742e3-3acc-4e98-a126-4bb953ba8576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\NibbleAndAHalf">
+      <UniqueIdentifier>{86405cd5-290b-4f90-b99c-7ff39280082f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Apache">
+      <UniqueIdentifier>{111ca535-6f35-4bdf-9208-45f83a1b499a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Arduino">
+      <UniqueIdentifier>{79016192-9abc-4cff-881b-ad432de4a808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\CppCodec">
+      <UniqueIdentifier>{7f2bef76-1f9e-4cc4-8300-fbd600457494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Gnome">
+      <UniqueIdentifier>{1616078c-3cce-4714-b04a-054885f83197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Libb64">
+      <UniqueIdentifier>{bc6a08cf-e526-4f35-a75a-198f3b19cb8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\LibCurl">
+      <UniqueIdentifier>{9f0b1aac-909d-4266-8e55-c88e7d1fab2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Adition">
+      <UniqueIdentifier>{47568dee-7d5a-48e2-8a1f-bd8117780a57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Boost">
+      <UniqueIdentifier>{c929fe7d-2954-4451-a978-a8076b451b40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\ModpB64Chromium">
+      <UniqueIdentifier>{08960bdd-5414-423c-b8d6-4e7229d49cf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\TomyKaria">
+      <UniqueIdentifier>{dcb353d2-3ecd-4b79-90b1-754789cf0cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Omnifarious">
+      <UniqueIdentifier>{df548111-2cbe-4af2-9c8f-495ba8ad247c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Polfosol">
+      <UniqueIdentifier>{94918185-c9b9-4885-8bee-369e9817e5c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\User152949">
+      <UniqueIdentifier>{2b21aff1-7ddd-4c2e-a6b8-e9ace6cacb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Wikibooks.org">
+      <UniqueIdentifier>{2a0971eb-0353-40b3-b02f-281ad7453666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\Turbob64">
+      <UniqueIdentifier>{5d760d12-c358-40dd-81b7-8abf15db88b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\picobase64">
+      <UniqueIdentifier>{d490dd70-4257-4edf-88aa-65a4c6dbec0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\IMUtility">
+      <UniqueIdentifier>{ee2dde68-e341-4cca-aa30-e903808a5b15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\base64-aklomp">
+      <UniqueIdentifier>{5c019b3b-715c-4834-afd0-d7b4fb03dafe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\base64-tl">
+      <UniqueIdentifier>{2285549c-17c7-469f-a24d-e797e1583826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\base64pp">
+      <UniqueIdentifier>{8e03b2f0-3dd5-427a-a052-b36af04b0678}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\adp-gmbh.ch\test_adp-gmbh.cpp">
+      <Filter>impl\adp-gmbh.ch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libb64\test_libb64.cpp">
+      <Filter>impl\Libb64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libcurl\curl_base64.cpp">
+      <Filter>impl\LibCurl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libcurl\test_libcurl.cpp">
+      <Filter>impl\LibCurl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\omnifarious\omnifarious.cpp">
+      <Filter>impl\Omnifarious</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\omnifarious\test_omnifarious.cpp">
+      <Filter>impl\Omnifarious</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\InternetSoftwareConsortium\InternetSoftwareConsortium.cpp">
+      <Filter>impl\InternetSoftwareConsortium</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\InternetSoftwareConsortium\test_InternetSoftwareConsortium.cpp">
+      <Filter>impl\InternetSoftwareConsortium</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\arduino\test_arduino.cpp">
+      <Filter>impl\Arduino</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LihO\LihO.cpp">
+      <Filter>impl\LihO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LihO\test_LihO.cpp">
+      <Filter>impl\LihO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ManuelMartinez\test_ManuelMartinez.cpp">
+      <Filter>impl\ManuelMartinez</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DaedalusAlpha\DaedalusAlpha.cpp">
+      <Filter>impl\DaedalusAlpha</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DaedalusAlpha\test_DaedalusAlpha.cpp">
+      <Filter>impl\DaedalusAlpha</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ElegantDice\test_ElegantDice.cpp">
+      <Filter>impl\ElegantDice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ElegantDice\ElegantDice.cpp">
+      <Filter>impl\ElegantDice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\polfosol\test_polfosol.cpp">
+      <Filter>impl\Polfosol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user152949\test_user152949.cpp">
+      <Filter>impl\User152949</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wikibooks.org\test_wikibooks_org_cpp.cpp">
+      <Filter>impl\Wikibooks.org</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wikibooks.org\test_wikibooks_org_c.cpp">
+      <Filter>impl\Wikibooks.org</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\apache\test_apache.cpp">
+      <Filter>impl\Apache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JouniMalinen\test_jounimalinen.cpp">
+      <Filter>impl\jounimalinen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NibbleAndAHalf\test_NibbleAndAHalf.cpp">
+      <Filter>impl\NibbleAndAHalf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gnome\test_gnome.cpp">
+      <Filter>impl\Gnome</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cppcodec\test_cppcodec.cpp">
+      <Filter>impl\CppCodec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libb64\libb64\src\cdecode.c">
+      <Filter>impl\Libb64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libb64\libb64\src\cencode.c">
+      <Filter>impl\Libb64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\adition\adition.cpp">
+      <Filter>impl\Adition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\adition\test_adition.cpp">
+      <Filter>impl\Adition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tomykaria\test_tomykaria.cpp">
+      <Filter>impl\TomyKaria</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\boost\test_boost.cpp">
+      <Filter>impl\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\modp_b64_chromium\modp_b64_chromium.cpp">
+      <Filter>impl\ModpB64Chromium</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\chromium\modp_b64\modp_b64.cc">
+      <Filter>impl\ModpB64Chromium</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Base64SurveyRepoort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Base64SurveyBenchmark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Base64SurveyTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Base64SurveyRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Turbob64\test_turbob64.cpp">
+      <Filter>impl\Turbob64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\picobase64\test_picobase64.cpp">
+      <Filter>impl\picobase64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\IMUtility\test_polfosol_imutility.cpp">
+      <Filter>impl\IMUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\base64-aklomp\test_base64-aklomp.cpp">
+      <Filter>impl\base64-aklomp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\base64-tl\test_base64-tl.cpp">
+      <Filter>impl\base64-tl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\base64pp\test_base64pp.cpp">
+      <Filter>impl\base64pp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\base64pp\base64pp\base64pp.cpp">
+      <Filter>impl\base64pp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\libcurl\curl_base64.h">
+      <Filter>impl\LibCurl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\omnifarious\omnifarious.h">
+      <Filter>impl\Omnifarious</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\InternetSoftwareConsortium\InternetSoftwareConsortium.h">
+      <Filter>impl\InternetSoftwareConsortium</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\arduino\arduino.h">
+      <Filter>impl\Arduino</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LihO\LihO.h">
+      <Filter>impl\LihO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ManuelMartinez\ManuelMartinez.h">
+      <Filter>impl\ManuelMartinez</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DaedalusAlpha\DaedalusAlpha.h">
+      <Filter>impl\DaedalusAlpha</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ElegantDice\ElegantDice.h">
+      <Filter>impl\ElegantDice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\polfosol\polfosol.h">
+      <Filter>impl\Polfosol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user152949\user152949.h">
+      <Filter>impl\User152949</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wikibooks.org\wikibooks_org_c.h">
+      <Filter>impl\Wikibooks.org</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wikibooks.org\wikibooks_org_cpp.h">
+      <Filter>impl\Wikibooks.org</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\apache\apache.h">
+      <Filter>impl\Apache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JouniMalinen\jounimalinen.h">
+      <Filter>impl\jounimalinen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NibbleAndAHalf\NibbleAndAHalf.h">
+      <Filter>impl\NibbleAndAHalf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gnome\gnome.h">
+      <Filter>impl\Gnome</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\adition\adition.hpp">
+      <Filter>impl\Adition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tomykaria\tomykaria.hpp">
+      <Filter>impl\TomyKaria</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Base64SurveyReport.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Base64SurveyBenchmark.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Base64SurveyTests.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Base64SurveyRegistry.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\IMUtility\polfosol_imutility.h">
+      <Filter>impl\IMUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\IMUtility\base64.h">
+      <Filter>impl\IMUtility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

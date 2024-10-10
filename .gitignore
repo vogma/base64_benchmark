@@ -43,3 +43,8 @@ base64.bin
 Makefile
 CTestTestfile.cmake
 *.vcxproj.user
+
+# Other
+.#*
+build/msvc/msvc.build/**
+build/msvc/result/**

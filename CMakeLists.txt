@@ -4,6 +4,8 @@ project(base64-benchmark)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+ADD_COMPILE_OPTIONS(-march=armv8.4-a+sve -O3 -static -Wall -g)
+
 set(CMAKE_BUILD_TYPE Release)
 enable_testing()
 

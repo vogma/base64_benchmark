@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "../Base64SurveyRegistry.hpp"
 #include "base64sve/lib/include/base64sve.h"
+#include <iostream>
 
 struct BASE64SVE_Adapt
 {
@@ -21,8 +22,6 @@ struct BASE64SVE_Adapt
         std::string encoded;
         encoded.resize(encLen);
         func((void *)&bytes[0], &encoded[0], bytes.length());
-        // void base64_encode(void *input, char *output, size_t length);
-
         return encoded;
     }
 
@@ -42,12 +41,12 @@ struct base64sve
 {
     std::string encode(const std::string &bytes)
     {
-        return BASE64SVE_Adapt::encode(base64_encode, bytes);
+        return BASE64SVE_Adapt::encode(base64sve_encode, bytes);
     }
 
     std::string decode(const std::string &base64)
     {
-        return BASE64SVE_Adapt::decode(base64_decode, base64);
+        return BASE64SVE_Adapt::decode(base64sve_decode, base64);
     }
 };
 

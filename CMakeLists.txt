@@ -29,6 +29,12 @@ set_target_properties(gmock_main PROPERTIES CXX_CLANG_TIDY "")
 add_subdirectory(./libs/base64pp)
 add_subdirectory(./libs/base64-aklomp)
 
+
+ADD_SUBDIRECTORY(libs/base64sve/)
+INCLUDE_DIRECTORIES(libs/base64sve/lib/include/)
+# INCLUDE_DIRECTORIES(libs/base64rvv/lib/include)
+
+
 include_directories(libs)
 
 aux_source_directory(./src/ CTR_SOURCES)
@@ -65,6 +71,9 @@ aux_source_directory(./src/modp_b64_chromium CTR_SOURCES)
 include_directories(libs/cppcodec)
 aux_source_directory(./src/cppcodec CTR_SOURCES)
 
+INCLUDE_DIRECTORIES(libs/base64sve/lib/include)
+AUX_SOURCE_DIRECTORY(./src/base64sve CTR_SOURCES)
+
 include_directories(libs/boost/utility/include)
 include_directories(libs/boost/serialization/include)
 include_directories(libs/boost/config/include)
@@ -78,14 +87,11 @@ include_directories(libs/boost/static_assert/include)
 include_directories(libs/boost/assert/include)
 aux_source_directory(./src/boost CTR_SOURCES)
 
-add_subdirectory(./libs/base64sve/)
-include_directories(libs/base64sve/lib/include)
-AUX_SOURCE_DIRECTORY(./src/base64sve CTR_SOURCES)
 
 set_source_files_properties( ${CTR_SOURCES} PROPERTIES LANGUAGE CXX )
 set_source_files_properties( ${C_SOURCES} PROPERTIES LANGUAGE C )
 
 add_executable(${PROJECT_NAME} ${CTR_SOURCES} ${C_SOURCES})
-target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest GTest::gtest_main base64pp base64)
+target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest GTest::gtest_main base64pp base64 base64sve -static)
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

@@ -73,6 +73,7 @@ aux_source_directory(./src/cppcodec CTR_SOURCES)
 
 INCLUDE_DIRECTORIES(libs/base64sve/lib/include)
 AUX_SOURCE_DIRECTORY(./src/base64sve CTR_SOURCES)
+AUX_SOURCE_DIRECTORY(./src/base64sve_x2 CTR_SOURCES)
 
 include_directories(libs/boost/utility/include)
 include_directories(libs/boost/serialization/include)

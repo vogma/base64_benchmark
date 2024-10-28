@@ -26,6 +26,7 @@ set_target_properties(gmock_main PROPERTIES CXX_CLANG_TIDY "")
 
 add_subdirectory(./libs/base64pp)
 add_subdirectory(./libs/base64-aklomp)
+add_subdirectory(./libs/base64rvv)
 
 include_directories(libs)
 
@@ -74,12 +75,13 @@ include_directories(libs/boost/iterator/include)
 include_directories(libs/boost/mpl/include)
 include_directories(libs/boost/static_assert/include)
 include_directories(libs/boost/assert/include)
+include_directories(libs/base64rvv/lib/include)
 aux_source_directory(./src/boost CTR_SOURCES)
 
 set_source_files_properties( ${CTR_SOURCES} PROPERTIES LANGUAGE CXX )
 set_source_files_properties( ${C_SOURCES} PROPERTIES LANGUAGE C )
 
 add_executable(${PROJECT_NAME} ${CTR_SOURCES} ${C_SOURCES})
-target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest GTest::gtest_main base64pp base64)
+target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest GTest::gtest_main base64pp base64 b64rvv)
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

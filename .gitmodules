@@ -65,3 +65,7 @@
 [submodule "libs/googletest"]
 	path = libs/googletest
 	url = https://github.com/google/googletest.git
+[submodule "libs/base64rvv"]
+	path = libs/base64rvv
+	url = https://github.com/vogma/base64rvv.git
+	branch = development

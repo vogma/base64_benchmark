@@ -75,8 +75,10 @@ include_directories(libs/boost/iterator/include)
 include_directories(libs/boost/mpl/include)
 include_directories(libs/boost/static_assert/include)
 include_directories(libs/boost/assert/include)
-include_directories(libs/base64rvv/lib/include)
 aux_source_directory(./src/boost CTR_SOURCES)
+
+include_directories(libs/base64rvv/lib/include)
+aux_source_directory(./src/base64rvv CTR_SOURCES)
 
 set_source_files_properties( ${CTR_SOURCES} PROPERTIES LANGUAGE CXX )
 set_source_files_properties( ${C_SOURCES} PROPERTIES LANGUAGE C )

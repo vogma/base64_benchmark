@@ -61,7 +61,8 @@
 	url = https://github.com/matheusgomes28/base64pp.git
 [submodule "libs/base64-aklomp"]
 	path = libs/base64-aklomp
-	url = https://github.com/aklomp/base64.git
+	url = https://github.com/vogma/base64.git
+	branch = riscv_integration
 [submodule "libs/googletest"]
 	path = libs/googletest
 	url = https://github.com/google/googletest.git

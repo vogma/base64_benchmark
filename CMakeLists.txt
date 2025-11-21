@@ -14,7 +14,7 @@ include(FetchContent)
 FetchContent_Declare(
   googletest
   GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG        750d67d809700ae8fca6d610f7b41b71aa161808
+  GIT_TAG        b514bdc898e2951020cbdca1304b75f5950d1f59
   SYSTEM
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
@@ -64,6 +64,7 @@ aux_source_directory(./src/tomykaria CTR_SOURCES)
 aux_source_directory(./src/stov-180947 CTR_SOURCES)
 aux_source_directory(./src/libb64/libb64/src C_SOURCES)
 aux_source_directory(./src/picobase64 CTR_SOURCES)
+aux_source_directory(./src/simdutf CTR_SOURCES)
 
 aux_source_directory(./libs/chromium/modp_b64 CTR_SOURCES)
 aux_source_directory(./src/modp_b64_chromium CTR_SOURCES)

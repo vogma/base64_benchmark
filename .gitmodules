@@ -68,3 +68,6 @@
 [submodule "libs/boost/mp11"]
 	path = libs/boost/mp11
 	url = https://github.com/boostorg/mp11.git
+[submodule "libs/base64sve"]
+	path = libs/base64sve
+	url = https://github.com/vogma/base64sve.git

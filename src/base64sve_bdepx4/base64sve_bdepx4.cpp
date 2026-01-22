@@ -3,7 +3,7 @@
 #include "base64sve/lib/include/base64sve.h"
 #include <iostream>
 
-struct BASE64SVE_Adapt_bdep
+struct BASE64SVE_Adapt
 {
 
     static constexpr inline size_t GetDecodeExpectedLen(size_t inLen) noexcept
@@ -37,18 +37,18 @@ struct BASE64SVE_Adapt_bdep
     }
 };
 
-struct base64sve_bdep
+struct base64sve_bdepx4
 {
     std::string encode(const std::string &bytes)
     {
-        return BASE64SVE_Adapt_bdep::encode(base64sve_encode_bdep, bytes);
+        return BASE64SVE_Adapt::encode(base64sve_encode_bdepx4, bytes);
     }
 
     std::string decode(const std::string &base64)
     {
-        return BASE64SVE_Adapt_bdep::decode(base64sve_decode, base64);
+        return BASE64SVE_Adapt::decode(base64sve_decode, base64);
     }
 };
 
-BASE64_REGISTER_ENCODER(base64sve_bdep);
-BASE64_REGISTER_DECODER(base64sve_bdep);
+BASE64_REGISTER_ENCODER(base64sve_bdepx4);
+BASE64_REGISTER_DECODER(base64sve_bdepx4);
